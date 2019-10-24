@@ -1,0 +1,14 @@
+﻿@using Proyecto_final.Models;
+@{
+    ViewBag.Title = "Inmobiliaria";
+}
+
+<h1>Bienvenido</h1>
+<h2>Inmobiliaria</h2>
+
+@foreach (Inmueble inmb in ViewBag.lista)
+{
+    <p>$@inmb.Precio, @inmb.Direccion, habitaciones = @inmb.Habitaciones</p>
+}
+
+

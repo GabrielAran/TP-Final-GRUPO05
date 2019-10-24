@@ -1,0 +1,16 @@
+﻿@using Proyecto_final.Models;
+@model  Usuario
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>login</h2>
+
+@using (Html.BeginForm("Login", "Clientes", FormMethod.Post))
+{
+    <p>Nombre del usuario: @Html.TextBoxFor(x => x.NombreDeUsuario)</p>
+    <p>Contraseña: @Html.TextBoxFor(x => x.Contraseña, new {type = "password" })</p>
+    <input type="submit" value="Login" />
+    @ViewBag.Error
+}
+
